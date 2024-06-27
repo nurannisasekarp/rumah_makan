@@ -24,7 +24,7 @@ $router->get('transactions', 'TransactionsController@index');
 
 //create
 $router->post('/products', 'ProductsController@store');
-$router->post('/transactions/store', 'TransactionsController@store');
+$router->post('/transactions', 'TransactionsController@store');
 
 //show=view product/transaction
 $router->get('/products/{id}', 'ProductsController@show');
@@ -32,10 +32,10 @@ $router->get('/transactions/{id}', 'TransactionsController@show');
 
 
 //delete
-$router->delete('/products/delete/{id}', 'ProductsController@destroy');
-$router->delete('/transactions/delete/{id}', 'TransactionsController@destroy');
+$router->delete('/products/{id}', 'ProductsController@destroy');
+$router->delete('/transactions/{id}', 'TransactionsController@destroy');
 
 
 //update
-$router->patch('/products/update/{id}', 'ProductsController@update');
-$router->patch('/transactions/update/{id}', 'TransactionsController@update');
+$router->patch('/products/{id}', 'ProductsController@update');
+$router->patch('/transactions/{id}', 'TransactionsController@update');

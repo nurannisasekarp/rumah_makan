@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace App\Http\Controllers;
 
 use App\Models\StuffStock;
@@ -41,6 +42,8 @@ class TransactionsController extends Controller
     {
         try {
             // validasi
+            // 'nama_column' => validasi
+            //"product_id","order_date", "quantity"
             $this->validate($request, [
                 'product_id' => 'required',
                 'order_date' => 'required',
